@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
 import Login from "@/views/login/index.vue";
 import Layout from "@/components/layout/index.vue";
 import Home from "@/views/home/index.vue";
@@ -131,7 +131,7 @@ const mergeRoutes = async (): Promise<RouteRecordRaw[]> => {
 };
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: await mergeRoutes(),
 });
 
